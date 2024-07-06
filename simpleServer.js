@@ -11,6 +11,7 @@ app.set("trust proxy", true);
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cors())
+app.use(express.static('public'))
 
 app.get("/", (req, res) => {
    const add = req.ip
